@@ -1,0 +1,47 @@
+Text field validation keep data after submit use required="required" 
+--------------------------------------------------------------------
+<input type="text" id="" name="phone" onkeypress="return onlyNos(event,this);" maxlength="15" required="required">
+
+<script language="Javascript" type="text/javascript">
+
+ 
+
+        function onlyNos(e, t) {
+
+            try {
+
+                if (window.event) {
+
+                    var charCode = window.event.keyCode;
+
+                }
+
+                else if (e) {
+
+                    var charCode = e.which;
+
+                }
+
+                else { return true; }
+
+                if (charCode > 31 && (charCode < 48 || charCode > 57) && charCode > 43 && charCode > 45) {
+
+                    return false;
+
+                }
+
+                return true;
+
+            }
+
+            catch (err) {
+
+                alert(err.Description);
+
+            }
+
+        }
+
+ 
+
+    </script>

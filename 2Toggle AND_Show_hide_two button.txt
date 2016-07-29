@@ -1,0 +1,54 @@
+
+show hide in Same Button ( TOGGLE )
+====================================
+
+<a onclick ="javascript:ShowHide('HiddenDiv')" href="javascript:;" >Show/Hide</a>
+
+<div class="mid" id="HiddenDiv" style="DISPLAY: none" >
+This text was hidden
+</div>
+
+<script language="JavaScript">
+function ShowHide(divId)
+{
+if(document.getElementById(divId).style.display == 'none')
+{
+document.getElementById(divId).style.display='block';
+}
+else
+{
+document.getElementById(divId).style.display = 'none';
+}
+}
+</script>
+
+
+Show / Hide in seperate Button :
+=================================
+
+
+<a onclick ="javascript:Show('HiddenDiv')" href="javascript:;" >Show</a>
+
+<div class="mid" id="HiddenDiv" style="DISPLAY: none" >
+This text was hidden
+</div>
+
+<script language="JavaScript">
+function Show(divId)
+{
+if(document.getElementById(divId).style.display == 'none')
+{
+
+document.getElementById(divId).style.display='block';
+}
+}
+function hide(divId)
+{
+if(document.getElementById(divId).style.display == 'block')
+{
+document.getElementById(divId).style.display = 'none';
+}
+}
+</script>
+
+<a onclick ="javascript:hide('HiddenDiv')" href="javascript:;" >Hide</a>

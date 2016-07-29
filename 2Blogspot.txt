@@ -1,0 +1,41 @@
+Phonegap:
+=========
+Phonegap, 
+------------------------------------------------------ 
+
+phonegap step  by step guide 
+
+phonegap api, Examples with db(php)
+
+Sample API implemented projects.
+
+Interview based quetions and ans with coding,
+
+Jquerymobile,
+
+Frameworks and other jquery JS files 
+
+Angular js,wijmo, some framworks implemented.
+
+Blogs and reference sites.
+
+
+-------------------------------------------------------
+
+Android core:
+==========
+
+UI, blogspot, projects and reference links, step by step guide,
+
+
+PHP
+======
+
+Core PHP, Functions, referece sites links, blogs, Workout egs.
+
+Advanced php, OOPS concept implemented php,
+
+CMS related edu for php
+
+Frameworks for php site developments.
+

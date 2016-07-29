@@ -1,0 +1,61 @@
+data.json File:
+===============
+
+data = '[{"name" : "Harry", "age" : "32"}]';
+
+html file :
+============
+
+<!doctype html>
+<html>
+    <head>
+        <title>askyb - Load JSON File Locally by Javascript Without JQuery</title>
+        <script type="text/javascript" src="sub/data.json"></script>
+        <script type="text/javascript">
+		function load() {
+			var mydata = JSON.parse(data);
+			alert(mydata[0].name);
+			alert(mydata[0].age);
+			alert(JSON.stringify(mydata));
+		}
+		
+	</script>
+    </head>
+    <body onload="load()">
+        askyb - Load JSON File Locally by Javascript Without JQuery
+    </body>
+</html>
+
+
+Example 2: using Ajax Call
+===========================
+
+<!doctype html>
+<html>
+<head>
+<script>
+function AJAX_JSON_Req( url )
+{
+    var AJAX_req = new XMLHttpRequest();
+    AJAX_req.open( "GET", url, true );
+    AJAX_req.setRequestHeader("Content-type", "application/json");
+
+    AJAX_req.onreadystatechange = function()
+    {
+        if( AJAX_req.readyState == 4 && AJAX_req.status == 200 )
+        {
+            var response = JSON.parse( AJAX_req.responseText );
+            document.write( response.name );
+        }
+    }
+    AJAX_req.send();
+}
+
+AJAX_JSON_Req('js/people.json');
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

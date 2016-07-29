@@ -1,0 +1,223 @@
+GRID VIEW/SPRING ICON POSITION IN MOBILE APP 
+
+
+<head>
+<style type="text/css">
+
+/* icon menu css */
+.iconList {margin-top: -10px !important;margin-left: 30px !important;}  /* optional */
+.iconList li  {display: inline; float: left; width: 44%; min-width: 55px; max-width: 120px; padding: 0; border-width: 0 !important; background: none !important;}
+.iconList li:first-child {border-width: 0 !important; border: 1px solid #ccc; border-top-right-radius: 0px; -moz-border-radius-topright: 0px; -webkit-border-top-right-radius: 0px; border-top-right-radius: 0px;}
+.iconList li:last-child  	{border-bottom-width: 0 !important; border-bottom-left-radius: 0px; -moz-border-radius-bottomleft: 0px; -webkit-border-bottom-left-radius: 0px; border-bottom-left-radius: 0px;}
+.iconList li div.ui-btn-inner  {width: auto; border-width: 0 !important;}
+.iconList li a {margin-right: 0; padding: 0 10px 0 0 !important;}
+.iconList li img {margin-right: 0; padding: 0.25em; width: 100%; position: static !important; float: none !important;}
+.iconList li h3 {display: block; max-width: 80px; position: static !important; margin: 0 0 0 0.25em; padding-top: 0; font-size: 80%; font-weight: normal; text-align: center;width: 100%; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; text-shadow: none;}
+
+</style>
+
+<head>
+
+<body>
+
+<div>
+<ul data-role="listview" class="iconList">
+      <li data-icon="false"><a href="#profile"><img src="images/gngphoto.jpg" alt="one" /><h3>one</h3></a></li>
+      <li data-icon="false"><a href="#profile"><img src="images/gngphoto.jpg" alt="two" /><h3>Two</h3></a></li>
+      <li data-icon="false"><a href="#profile"><img src="images/gngphoto.jpg" alt="three" /><h3>Three</h3></a></li>
+      <li data-icon="false"><a href="#profile"><img src="images/gngphoto.jpg" alt="Four" /><h3>Four</h3></a></li>
+      <li data-icon="false"><a href="#profile"><img src="images/gngphoto.jpg" alt="Four" /><h3>Four</h3></a></li>
+      <li data-icon="false"><a href="#profile"><img src="images/gngphoto.jpg" alt="Four" /><h3>Four</h3></a></li>
+</ul>
+
+</div>
+</body>
+
+===========================================
+
+FULL EXAMPLE
+------------
+
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="utf-8">
+<title>jQuery Mobile Web App</title>
+<link href="jquery.mobile.theme-1.0.min.css" rel="stylesheet" type="text/css"/>
+<link href="jquery.mobile.structure-1.0.min.css" rel="stylesheet" type="text/css"/>
+<script src="jquery-1.6.4.min.js" type="text/javascript"></script>
+<script src="jquery.mobile-1.0.min.js" type="text/javascript"></script>
+
+<style type="text/css">
+
+/* icon menu css */
+.iconList {margin-top: -10px !important;margin-left: 30px !important;}  /* optional */
+.iconList li  {display: inline; float: left; width: 44%; min-width: 55px; max-width: 120px; padding: 0; border-width: 0 !important; background: none !important;}
+.iconList li:first-child {border-width: 0 !important; border: 1px solid #ccc; border-top-right-radius: 0px; -moz-border-radius-topright: 0px; -webkit-border-top-right-radius: 0px; border-top-right-radius: 0px;}
+.iconList li:last-child  	{border-bottom-width: 0 !important; border-bottom-left-radius: 0px; -moz-border-radius-bottomleft: 0px; -webkit-border-bottom-left-radius: 0px; border-bottom-left-radius: 0px;}
+.iconList li div.ui-btn-inner  {width: auto; border-width: 0 !important;}
+.iconList li a {margin-right: 0; padding: 0 10px 0 0 !important;}
+.iconList li img {margin-right: 0; padding: 0.25em; width: 100%; position: static !important; float: none !important;}
+.iconList li h3 {display: block; max-width: 80px; position: static !important; margin: 0 0 0 0.25em; padding-top: 0; font-size: 80%; font-weight: normal; text-align: center;width: 100%; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; text-shadow: none;}
+
+</style>
+</head> 
+<body> 
+
+<div data-role="page" id="page">
+	<div data-role="header">
+		<h1>Page One</h1>
+	</div>
+	<div data-role="content">	
+		<ul data-role="listview">
+			<li><a href="#page2">Genral shift Attendence</a></li>
+            <li><a href="#page3">Camera API</a></li>
+			<li><a href="#getinfo">Corporate Information Services </a></li>
+		</ul>
+        <h1>Example</h1>
+    <p>Find Contacts</p>		
+	</div>
+	<div data-role="footer">
+		<h4>Mobile HRMS</h4>
+	</div>
+</div>
+
+<div data-role="page" id="page2">
+	<div data-role="header" data-position="fixed">
+		<h1>Attendence </h1>
+	</div>
+	<div data-role="content">
+    
+    <ul data-role="listview" data-inset="true">
+    <li><a href="#">
+        <img src="images/gngphoto.jpg">
+        <h2>Employee Full Name </h2>
+        <p>Employee Desgnation/ Employee Code</p></a>
+    </li>
+ 
+ <fieldset data-role="controlgroup" data-type="horizontal" style="text-align: center">
+  <div style="width: 600px; margin: 0 auto;">
+   <input type="radio" name="radio-choice-1" id="radio-choice-1" value="choice-1" checked="checked" />
+   <label for="radio-choice-1">In Time</label>
+   <input type="radio" name="radio-choice-1" id="radio-choice-2" value="choice-2"  />
+   <label for="radio-choice-2">Out Time</label>
+ </div>
+</fieldset>
+      <div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-e" style="height:60px">17-05-2013<br/>09:45 </div>
+    
+    </div>
+    <div class="ui-block-b"><div class="ui-bar ui-bar-e" style="height:60px">17-05-2013<br/>18:45 </div>
+   
+    </div>
+</div><!-- /grid-a -->
+
+
+</ul>	
+	<div data-role="collapsible-set" data-theme="c" data-content-theme="d" data-mini="true">
+    <div data-role="collapsible">
+        <h3>Daily Attadence report</h3>
+        <p><ul><li>1</li><li>1</li><li>1</li><li>1</li><li>1</li></ul></p>
+    </div>
+    <div data-role="collapsible">
+        <h3>Monthly Attadence report</h3>
+        <p><ul><li>2</li><li>2</li><li>2</li><li>2</li><li>2</li></ul></p>
+    </div>
+    <div data-role="collapsible">
+        <h3>Annual Attadence report</h3>
+        <p><ul><li>3</li><li>3</li><li>3</li><li>3</li><li>3</li></ul></p>
+    </div>
+</div>		
+	</div>
+	<div data-role="footer" data-position="fixed">
+		<h4>Page Footer</h4>
+	</div>
+</div>
+
+<div data-role="page" id="page3">
+	<div data-role="header">
+		<h1>Page Three</h1>
+	</div>
+	<div data-role="content">	
+		<!--<div class="ui-grid-a">
+	<div class="ui-block-a">Previous</div>
+	<div class="ui-block-b">Next</button></div>	   
+</div>-->
+<div>
+<ul data-role="listview" class="iconList">
+      <li data-icon="false"><a href="#profile"><img src="images/gngphoto.jpg" alt="one" /><h3>one</h3></a></li>
+      <li data-icon="false"><a href="#profile"><img src="images/gngphoto.jpg" alt="two" /><h3>Two</h3></a></li>
+      <li data-icon="false"><a href="#profile"><img src="images/gngphoto.jpg" alt="three" /><h3>Three</h3></a></li>
+    <li data-icon="false"><a href="#profile"><img src="images/gngphoto.jpg" alt="Four" /><h3>Four</h3></a></li>
+     <li data-icon="false"><a href="#profile"><img src="images/gngphoto.jpg" alt="Four" /><h3>Four</h3></a></li>
+      <li data-icon="false"><a href="#profile"><img src="images/gngphoto.jpg" alt="Four" /><h3>Four</h3></a></li>
+</ul>
+
+</div>
+	</div>
+	<div data-role="footer">
+		<h4>Page Footer</h4>
+	</div>
+</div>
+
+<div data-role="page" id="getinfo">
+	<div data-role="header">
+		<h1>Corporate Directory</h1>
+	</div>
+	<div data-role="content">	
+    
+     <form name="corprategetdir" method="post"   action="javascript:getinfo()">   
+		
+Search By::
+<div data-role="fieldcontain">
+    <label for="search-2"> Name :</label>
+    <input type="search" name="ename" id="ename" value="" />
+</div>
+<div data-role="fieldcontain">
+    <label for="search-2">Employee ID:</label>
+    <input type="search" name="eid" id="eid" value="" />
+</div>
+<!--<div data-role="fieldcontain">
+    <label for="search-2"> Department:</label>
+    <input type="search" name="edept" id="edept" value="" />
+</div>
+<div data-role="fieldcontain">
+    <label for="search-2">Designation:</label>
+    <input type="search" name="edesg" id="edesg" value="" />
+</div><br>-->
+
+<input type="submit" value="Submit"  data-inline="true"/>
+<input type="reset" value="Reset Values" data-inline="true" data-theme="b" />
+
+
+<!--/*<ul data-role="listview">
+    <li>Acura</li>
+    <li>Audi</li>
+    <li>BMW</li>
+    <li>Cadillac</li>
+    <li>Ferrari</li>
+</ul>*/-->
+<ul data-role="listview" data-inset="true" data-theme="c">
+
+
+     
+    <li data-icon="gear" id="mailid"><a href="#">Mail ID:</a></li>
+    <li data-icon="info" id="mobileno"><a href="#">Mobile No:</a></li>
+   
+</ul>
+
+
+
+
+</form>
+
+
+	</div><!-- content end div tag-->
+       
+	<div data-role="footer">
+		<h4>Mobile HRMS -7</h4>
+	</div>
+</div>
+
+</body>
+</html>

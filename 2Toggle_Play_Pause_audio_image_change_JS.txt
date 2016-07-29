@@ -1,0 +1,29 @@
+<!doctype html>
+
+<html>
+<body>
+<audio  id="player" src="Kalimba.mp3"></audio>
+
+   
+    
+    <img src="img/volumemute.jpg" class="topbottomicon" onclick="aud_play_pause()" id="image"/>
+
+<script>
+function aud_play_pause() {
+  var myAudio = document.getElementById("player");
+  var image = document.getElementById("image");
+  if (myAudio.paused) {
+      
+    myAudio.play();
+      image.src = "img/volume.jpg"
+  } else {
+    myAudio.pause();
+      image.src = "img/volumemute.jpg"
+  }
+}
+</script>
+</body>
+</html>
+
+
+ 

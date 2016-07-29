@@ -1,0 +1,43 @@
+Css code in javascript function:
+================================
+
+There are several ways to do this.
+
+Option 1.
+
+<script type="text/javascript">
+   function MyFunction(sender, eventArgs) {
+       if (someCondition) {
+          someelement.style.cssText = "background: url(Images/myImage.png) !important;"
+       }
+    }
+</script>
+
+
+Option 2.
+
+ <script type="text/javascript">
+       function MyFunction(sender, eventArgs) {
+           if (someCondition) {
+              someelement.className = "someclass"
+           }
+        }
+    </script>
+where,
+
+<style>
+.someclass{
+background: url(Images/myImage.png) !important;
+}
+</style>
+
+
+Option 3
+
+ <script type="text/javascript">
+           function MyFunction(sender, eventArgs) {
+               if (someCondition) {
+                  someelement.setAttribute('style', 'background: url(Images/myImage.png) !important;');
+               }
+            }
+        </script>

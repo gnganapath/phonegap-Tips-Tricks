@@ -1,0 +1,70 @@
+PhoneGap/Cordova Android get screen size after onDeviceReady :
+==============================================================
+SOLN 1:
+=======
+function getWindowSizes() 
+{
+  var windowHeight = 0, windowWidth = 0;
+  
+  if (typeof (window.innerWidth) == 'number') {
+      windowHeight = window.innerHeight;
+      windowWidth = window.innerWidth;
+      
+  } else if (document.documentElement && (document.documentElement.clientWidth || document.documentElement.clientHeight)) {
+      windowHeight = document.documentElement.clientHeight;
+      windowWidth = document.documentElement.clientWidth;
+      
+  } else if (document.body && (document.body.clientWidth || document.body.clientHeight)) {
+     windowHeight = document.body.clientHeight;
+     windowWidth = document.body.clientWidth;
+  }
+  return [windowWidth, windowHeight];
+}
+<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1,
+width=device-width, height=device-height, target-densitydpi=device-dpi" />
+
+
+
+
+There are a few ways to do it, for example:
+
+    Check window.orientation value
+    Compare innerHeight vs. innerWidth
+
+You can adapt one of the methods below.
+
+SOLN 2:
+=======
+
+Check if device is in portrait mode
+
+function isPortrait() {
+    return window.innerHeight > window.innerWidth;
+}
+
+SOLN 3:
+=======
+Check if device is in landscape mode
+
+function isLandscape() {
+    return (window.orientation === 90 || window.orientation === -90);
+}
+
+SOLN 4:
+=======
+Example usage
+
+if (isPortrait()) {
+    alert("This page is best viewed in landscape mode");
+}
+
+SOLN 5:
+=======
+How do I detect the orientation change?
+
+$(document).ready(function() {
+    $(window).on('orientationchange', function(event) {
+        console.log(orientation);
+    });
+});
+

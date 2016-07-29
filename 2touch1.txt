@@ -1,0 +1,129 @@
+<!-- Copyright (c) 2012 Mobile Developer Solutions -->
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta http-equiv="Content-type" name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
+    <title>MDS PhoneGap API Demo with jQuery Mobile</title>
+
+ 	<link rel="stylesheet" href="jquery.mobile/jquery.mobile-1.1.0.min.css" />
+	<link rel="stylesheet" href="index.css" /> 
+
+    <script src="jquery.mobile/jquery-1.7.2.min"></script>
+	<script src="jquery.mobile/jquery.mobile-1.1.0.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="phonegap-1.4.1.js"></script>
+	<script type="text/javascript" charset="utf-8" src="index.js"></script>
+   
+   
+   <script type="text/javascript">
+   
+   
+   function leavedays(){
+	   alert('a');
+   var year=2013;
+   var query="myear="+year
+   alert("one");
+   
+   
+   $.ajax({
+	  
+ 	   url:"http://192.168.1.36:9090/touch/mobile_leave_dayslist.php",
+	   type:"POST",
+	   data:query,
+	   timeout:5000,
+	   success:function(data) {
+			
+			
+			alert('c');
+			 data=jQuery.parseJSON(data);	
+			  if(data.status==1)
+			  {
+				alert("success");
+				
+				
+				//while(data!=null){
+				$('#leavedates').text(data.leavedates);
+				$('#leavedatesdesc').text(data.leavedatesdesc);
+				//}
+
+			  }
+		  else if(data.status==0)
+		  {
+		  alert("Failed");	
+		//  navigator.app.exitApp();
+			  
+		  }
+		}
+			  });
+   
+   }
+   </script>
+   
+     
+
+<link rel="stylesheet" href="index.css" type="text/css" media="screen" />
+
+<style>
+.left {
+    width: 40%;
+    float: left;
+    text-align: left;
+	font-size:12px;
+	font-weight:bold;
+}
+.left1 {
+    width: 100%;
+    float: left;
+    text-align: left;
+	
+	font-size:12px;
+	
+}
+.right {
+    width: 50%;
+    float:left;
+	font-size:12px;
+}
+</style>          
+	</head>
+	<body>
+	<div data-role="page" id="corpinfoser">
+	<div data-role="header">
+		<h1>Info Service</h1>
+	</div>
+	<div data-role="content">	
+		<div data-role="collapsible-set" data-content-theme="c">
+    <div data-role="collapsible" data-theme="b" data-content-theme="b" >
+        <h3>List of Holidays</h3>
+       <ul data-role="listview" onclick="javascript:leavedays();">
+      <li>
+       <div class="left" >
+			<label id="leavedates">DD MON YYYY</label>
+		</div>
+		<div class="right">
+			<label id="leavedatesdesc"> Description</label>
+		</div>
+		</li>
+		</ul>
+		
+    </div>
+    <div data-role="collapsible" data-theme="a" data-content-theme="c">
+        <h3>Employee leave days available </h3>
+        <p>Collapsible content, swatch "a"</p>
+    </div>
+    <div data-role="collapsible" data-theme="e" data-content-theme="d">
+        <h3>Birhtday , Anniversary</h3>
+        <p>Collapsible content, swatch "d"</p>
+    </div>
+    <div data-role="collapsible" data-theme="d" data-content-theme="b">
+        <h3>Achievements</h3>
+        <p>Collapsible content, swatch "d"</p>
+    </div>
+</div>	
+	</div>
+	<div data-role="footer">
+		<h4>Module - 6</h4>
+	</div>
+</div>
+	
+	</body>
+	</html>

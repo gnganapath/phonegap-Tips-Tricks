@@ -1,0 +1,50 @@
+Input value cange by Number Picker based on left right side of text box:
+========================================================================
+
+Javascript Arithamatic Operation :
+
+
+Javascript addion word if both the varaible are in Numeric datatype;
+
+when try to make addiona operation in javscript function, 
+
+It's consider as string concationation in var + number.
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Spinner Control in HTML5 by Mobile DON</title>
+	<script>
+	function inc()
+	{
+	
+	var inc= document.getElementById('age').value;
+	
+	inc++;
+	console.log(inc);
+	document.getElementById('age').value=inc;
+	}
+	
+	function dec()
+	{
+	
+	var dec= document.getElementById('age').value;
+	dec= dec-1;
+	console.log(dec);
+	document.getElementById('age').value=dec;
+	}
+	
+	</script>
+</head>
+<body>
+   <form>
+     <label for="age" >
+     	<i value="dec" onclick="dec()" >   Minus </i>
+     	<input type="number" name="age" id="age"  />
+     	<i value="inc" onclick="inc()" > Plus</i>
+     </label>
+    </form>
+</body>
+</html>

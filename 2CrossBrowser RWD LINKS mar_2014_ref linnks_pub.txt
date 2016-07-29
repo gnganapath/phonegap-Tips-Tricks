@@ -1,0 +1,28 @@
+cross borwser compatibility :
+
+http://www.hongkiat.com/blog/complete-guide-to-cross-browser-compatibility-check/
+
+http://www.1stwebdesigner.com/design/tools-browser-compatibility-check/
+
+http://www.designer-daily.com/10-cross-browser-compatibility-tools-for-designers-13359
+
+http://mashable.com/2014/02/26/browser-testing-tools/
+
+http://www.sitepoint.com/understanding-responsive-web-design-cross-browser-compatibility/
+
+
+Responsive web Design:
+
+http://designinstruct.com/web-design/what-is-responsive-web-design/
+
+http://www.awwwards.com/websites/responsive-design/
+
+http://smallbiztrends.com/2013/05/what-is-responsive-web-design.html
+
+http://webdesignerwall.com/tutorials/responsive-design-in-3-steps
+
+http://www.readerspark.com/threads/how-to-create-a-responsive-web-design.35/
+
+http://blog.teamtreehouse.com/beginners-guide-to-responsive-web-design
+
+ 

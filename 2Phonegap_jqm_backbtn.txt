@@ -1,0 +1,40 @@
+Phonegap Android Back Button - close app with back button on homepage
+====================================================================
+I am developing a Android app using Jquery Mobile/Phonegap. I have the following code to control the phone's back button:
+
+document.addEventListener("backbutton", backKeyDown, true); 
+
+
+function backKeyDown() { 
+    // Call my back key code here.
+    $.mobile.changePage("#homepage", "slideup");
+}
+This all works fine, but I would like the app to close when pressing the back button on the homepage only, is this possible?
+
+-------------------------------------------------------------------
+close app in particular page hardware back button.
+--------------------------------------------------
+
+document.addEventListener("backbutton", function(e){
+    if($.mobile.activePage.is('#homepage')){
+        e.preventDefault();
+        navigator.app.exitApp();
+    }
+    else {
+        navigator.app.backHistory()
+    }
+}, false);
+
+-------------------------------------------------------------
+
+
+document.addEventListener("deviceready", onDeviceReady, false);
+function onDeviceReady() {
+    document.addEventListener("backbutton", onBackKeyDown, false);
+}
+function onBackKeyDown() 
+{
+ navigator.app.exitApp();  
+
+// otherwise alert("use click area");
+}

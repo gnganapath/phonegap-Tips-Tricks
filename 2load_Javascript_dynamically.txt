@@ -1,0 +1,12 @@
+<input type="button" onclick="helper()" value="Helper">
+
+   <script language="JavaScript">
+   function helper()
+   {
+      var head= document.getElementsByTagName('head')[0];
+      var script= document.createElement('script');
+      script.type= 'text/javascript';
+      script.src= 'helper.js';
+      head.appendChild(script);
+   }
+   </script>

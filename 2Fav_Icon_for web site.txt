@@ -1,0 +1,11 @@
+Convert your image to the ICO format :
+
+http://image.online-convert.com/convert-to-ico
+
+Upload image and set pixel 16x16
+
+convert and download image as ico format..
+
+Add this line in html page after meta Tag and before Css inclusion.
+
+<link rel="icon" type="image/jpg" href="images/fav.ico">

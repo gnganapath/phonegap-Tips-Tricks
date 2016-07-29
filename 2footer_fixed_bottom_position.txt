@@ -1,0 +1,11 @@
+Footer fixed bootom postion
+
+I have a page with only a couple of lines of content. I want the footer to be pushed to the bottom.
+
+<div id="footer"></div>
+
+I don't want to use #footer{position:fixed;bottom:0;} AKA Sticky Footer
+
+Is this possible without jQuery?
+
+ThaX for REf link:	http://stackoverflow.com/questions/16679146/force-footer-on-bottom-on-pages-with-little-content

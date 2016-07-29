@@ -1,0 +1,12 @@
+http://stackoverflow.com/questions/16542118/phonegap-navigator-app-backhistory-not-working-on-html-back-button?rq=1
+
+
+http://stackoverflow.com/questions/12837649/phonegap-2-10-hardware-back-button-not-working-properly
+
+
+http://stackoverflow.com/questions/8602722/phonegap-android-back-button-close-app-with-back-button-on-homepage
+
+Hi,
+
+We upgraded AllsecSmartpay Mobile application from phonegap version to Cordova 2.8 to resolve issue in Android OS. So, All the pages functionality  are tested in JeallyBean OS -(Device Samsaung 1300 Tab). Current updated apk file and Android project attached here. 
+---

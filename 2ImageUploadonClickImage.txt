@@ -1,0 +1,39 @@
+html:
+
+<input id="profile-image-upload" class="hidden" type="file">
+<div id="profile-image">click here to change profile image</div>
+
+js:
+
+$(function() {
+    $('#profile-image').on('click', function() {
+        $('#profile-image-upload').click();
+    });
+});
+
+    
+css:
+
+input.hidden {
+    position: absolute;
+    left: -9999px;
+}
+
+#profile-image {
+    cursor: pointer;
+    background: #8adffb;
+ 	width: 80px;
+    height: 80px;
+}
+
+Ref : jquery1.9.1 
+REF: http://jsfiddle.net/L8xCb/3/
+
+working code:
+
+
+<div id="profile-image1"><img  src="<?php echo $image1; ?>" ></div>
+ <input id="profile-image-upload1" class="hidden" type="file" name="file1"></input>
+
+We can add more than one image image1,image2 at css,js files.
+

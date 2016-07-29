@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/jquery.mobile-1.4.2.min.css" />
+<link rel="shortcut icon" href="images/i1.jpg" />   <!-- Add your custom icon to display in tab title page(Browser not PG App) -->
+
+Thanks for Ref Link 
+http://stackoverflow.com/questions/15786937/add-image-in-title-bar
+</head>
+<body>
+Title Icon Display
+
+</body>
+</html>

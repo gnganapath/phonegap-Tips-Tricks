@@ -1,0 +1,33 @@
+function refreshPage()
+{
+    jQuery.mobile.changePage(window.location.href, {
+        allowSamePageTransition: true,
+        transition: 'none',
+        reloadPage: true
+    });
+}
+
+
+
+// page flickering code 3
+   function refreshPage()
+   {
+       jQuery.mobile.changePage(window.location.href, {
+           allowSamePageTransition: true,
+           transition: 'none',
+           reloadPage: true
+       });
+   }
+
+
+   
+   // page flickering code 1
+   $(document).bind("mobileinit", function(){
+	   $.extend(  $.mobile , {
+	    defaultPageTransition: 'none'
+	   });
+	 });
+   
+// page flickering code 2
+   $.mobile.defaultPageTransition = 'none'; 
+   $.mobile.defaultDialogTransition = 'none'; 

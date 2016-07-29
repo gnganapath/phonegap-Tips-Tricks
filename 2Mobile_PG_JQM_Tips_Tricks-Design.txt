@@ -1,0 +1,8 @@
+Development testing Mobile phonegap JQuery mobile Applcaiton :Desgining
+-----------------------------------------------------------------------
+
+For designing the application Use dreamweaver and make site.
+
+with help of Android or iPAD connect via Wi-fi.
+
+Particular IP type in device url will get tab desing application view.

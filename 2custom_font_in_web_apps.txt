@@ -1,0 +1,31 @@
+
+Custom font for JQM / Web page:
+===============================
+
+
+we can add two 2 ways font-family
+
+1. web fonts, 2. font-face
+
+For font face -> download your choise of font and store in font folder:
+
+add the css in you css file
+
+
+@font-face {
+    font-family: myFirstFont;
+    src: url("font/AlexBrush-Regular.ttf");
+}
+
+*{
+    font-family: myFirstFont !important;
+}
+
+soln 2:
+======
+
+Use google web fonts:
+
+<link href=' http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+
+ then in css h1 { font-family: 'Droid Sans', arial, serif; }

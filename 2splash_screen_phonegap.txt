@@ -1,0 +1,60 @@
+
+120
+down vote accepted
+--------------------
+In order to have a splash screen in a PhoneGap Android application you need to put your splash.png file into res/drawable-ldpi, res/drawable-mdpi, res/drawable-hdpi, 
+res/drawable-xhdpi. 
+Where those directories represent low, medium, high and extra large dots per inch. You'll need to resize you slash.png for each directory or
+Android will stretch it for you.
+
+The sizes of each image should be:
+
+xlarge (xhdpi): at least 960 x 720
+large (hdpi): at least 640 x 480
+medium (mdpi): at least 470 x 320
+small (ldpi): at least 426 x 320
+
+
+------->>>>For allsec we mentioned all 320 x 480 px image
+
+
+Then in your main Java class, the one that extends DroidGap, you'll need to add one line and modify another. First add:
+
+super.setIntegerProperty("splashscreen", R.drawable.splash);
+this line should show up under super.onCreate but before super.loadUrl. 
+Then you'll need to modify your loadUrl method to pause for 5 seconds before loading up the main page. It would look like this:
+
+super.loadUrl("file:///android_asset/www/index.html", 5000);
+That should do it for you.
+
+I've recently made some updates to how the SplashScreen works on PhoneGap Android. The main app now loads while the splash screen is being shown. 
+This is a big improvement over the previous blocking splash screen call. Read more about the changes on my blog.
+
+
+
+
+
+
+
+
+
+
+
+
+2 down vote
+-----------
+In my Phonegap app, Android version, Eclipse debugger throws tantrums if you set the splash screen or even the 'loading' dialog before calling loadUrl.
+
+Both will work in the actual app installed on a device, but they will break your debugging. So I've put them behind loadUrl, 
+where they can do no harm and still show well before the app itself.
+
+public class App extends DroidGap {
+/** Called when the activity is first created. */
+@Override
+public void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    super.loadUrl("file:///android_asset/www/index.html",5000);
+    super.setStringProperty("loadingDialog", "Starting your app...");
+    super.setIntegerProperty("splashscreen", R.drawable.splash);
+    ...
+}...

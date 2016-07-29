@@ -1,0 +1,74 @@
+phonegap cordova article :
+-----------------------------------
+eclipse phonegap plug in -> https://svn.codespot.com/a/eclipselabs.org/mobile-web-development-with-phonegap/tags/r1.2/download
+
+webmobileapps.blogspot.in
+
+1.PAGE : NOV -PAY SLIP - >device info full example
+2.PAGE : E web liks - > jqm test app create in on line
+3.PAGE : july 2013 -> ios and titanium, jqm 9lesson form
+4.PAGE : web hostin -> 50 jqm fundmentals ,ajax captcha
+
+5.july2012: jqm apps digital count,jqm gallery
+
+6.October2012 : Android, ADT, phonegap,html plugin                                         <<== complete reference eclipse plug in
+
+7.March 2013 :xcode ios setup                                                                              <<== good ios reference 
+
+8.May 2013 : android splash screen
+
+9.June 2013 : phonegap Back gorund image include
+
+10.Augest 2013 : jqm phonegap ajax json drop down,list view, append 
+11.augest 2013 : manage too l bars in jqm
+12.augest 2013 : spring board / grid view
+13.augest 2013 : jqm phonegap tips tricks
+14.augest 2013 : jqm auto complete
+15.october 2013 : phonegap command line interface creation version 2.6 (smaat)
+
+16.Nov 2013:HTML5 jquery frameworks
+17.Nov 2013 :  phonegap set up build                                                   -->R.no6 repeat
+
+18.Dec 2013: Capcha Implementation js file
+19.Dec 2013: JQM popup
+20.Dec 2013 : Same App name not possible for iphone and ipad
+21.Dec 2013 : Remember me in login page jqm
+21.Dec 2013: phonegap JQM -Table vs Grid View in jqm
+22.Dec 2013: google map direction service in jqm
+23.Dec 2013: google map get direction service in jqm
+24.Dec 2013: phonegap version upgrade
+25.Dec 2013:Phonegap ios xocde guide                                            -> R.no 7 repeat with clear detials
+26.Dec 2013 :JQM jested json
+27.Dec 2013:Jqm $.for each (){}
+28.Dec 2013: json multiple row return
+29.Dec 2013:loop in stringfy
+30.Dec 2013:Json key value in jqm
+31.Dec 2013: grid view 3x3 
+32.DEc 2013: Phonegap online and offline red/green image                   ---> super eg
+33.Dec 2013: phonegap orientation change 
+
+34.Jan2014:phonegap 3.3 setup latest                                                             R.no 6, 17 ,34  latest
+35.Jan2014:jquery disable text selection in android and ios
+36.Jan 2014:BlackBerry  WebWorks set up links
+37.Jan 2014:JQM master DEMO and Code implement
+38.Jan 2014: CSS3 page orientation
+39.Jan 2014: slider links for jq
+
+40.Feb 2014: socila media addthis
+41.Feb 2014:JQM sample online template
+42.Feb 2014:JQM touchswipe swipe left / right
+43. Feb 2014: jqm swipe left / right masterswipe
+44. Feb 2014: scoop.it phonegap + jqm tutor
+45.Feb 2014: html5 use links
+46.Feb 2014:IPAD disable browser Bounce
+47.Feb 2014:HTML5,css3,jq, ajax begin guide
+48.Feb 2014:horizantal list view menu
+49.Feb 2014:HTML5 offline storage
+50.Feb 2014:Firebug implementation firfox and chrome
+
+51.Mar 2014: Blackberry Phonegap Rim set up guide                       R.no 36 repeat
+52.Mar 2014:Http status error list
+53.Mar 2014:Cross browser  platform compatibility testing tools
+54.Mar 2014:Responsive Design
+                            
+

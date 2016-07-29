@@ -1,0 +1,17 @@
+Load an External Javascript file dyanamically calling:
+======================================================
+
+<script>
+
+var oHead = document.getElementsByTagName('HEAD').item(0);
+var oScript= document.createElement("script");
+oScript.type = "text/javascript";
+oScript.src="other.js";    // we can pass even folder level js files too. (i.e) foldernamee+"mainjs.js";
+oHead.appendChild( oScript);
+
+</script>
+
+
+For Further Ref:
+Thanks for Sharing :
+http://ntt.cc/2008/02/10/4-ways-to-dynamically-load-external-javascriptwith-source.html

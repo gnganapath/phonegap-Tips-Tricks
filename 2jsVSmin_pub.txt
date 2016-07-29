@@ -1,0 +1,16 @@
+What is the difference between jquery.min.js and jquery.js?
+
+Ans:#1
+
+They are both the same functionally but the .min one has all unnecessary characters removed in order to make the file size smaller.
+
+Just to point out as well, you are better using the minified version (.min) for your live environment as Google are now checking on page loading times. Having all your JS file minified means they will load faster and will score you more brownie points.
+
+You can get an addon for Mozilla called Page Speed that will look through your site and show you all the .JS files and provide minified versions (amongst other things).
+
+Ans:#2
+======
+
+Both support the same functions. jquery.min.js is a compressed version of jquery.js 
+(whitespaces and comments stripped out, shorter variable names, ...) in order to preserve bandwidth. 
+In terms of functionality they are absolutely the same. It is recommended to use this compressed version in production environment.

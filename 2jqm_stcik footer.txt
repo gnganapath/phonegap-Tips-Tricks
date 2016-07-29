@@ -1,0 +1,12 @@
+jQuery Mobile: Stick footer to bottom of page:
+=================================
+add css:
+----------
+[data-role=page]{height: 100% !important; position:relative !important;}
+[data-role=footer]{bottom:0; position:absolute !important; top: auto !important; width:100%;}
+
+
+Disable Div.jqm-content : 
+
+css : 
+div.jqm-contne{ display:none; }

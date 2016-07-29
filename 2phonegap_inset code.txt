@@ -1,0 +1,58 @@
+
+<style type="text/css">
+.pageheader
+	{
+	background:#C09;
+	border-color:#0C0;
+	border-left:outset;
+	border-left-color: #00F;
+	border-left-style:groove;
+	border-left-width:thick;
+	border-spacing:inherit;
+	border-right-width:thick;
+	border-right-style:groove;
+	border-right-color:#C3F;
+	font-family:Tahoma, Geneva, sans-serif;
+	font-style:italic;
+	}
+	
+.pagecontent
+	{
+	alignment-adjust:auto;
+	background-color:#CC9;
+	background-size:contain;
+	}
+	
+.pagefooter
+	{
+	}
+#page2
+	{
+		background:#00F;
+		
+	}
+
+
+
+.inset
+	{
+border-color:#99C;
+border-style:double;
+border-width:10px;
+margin-bottom:10px;
+margin-left:10px;
+margin-right:10px;
+margin-top:10px;
+background:url(images/gngphoto.jpg) no-repeat center;
+background-size:cover;
+	}
+</style>
+
+
+<div data-role="page" id="page2" >
+	<div data-role="header" data-theme="b" data-position="fixed" class="pageheader">
+		<h1>Page Two</h1>
+	</div>
+	<div data-role="content" class="pagecontent" >	
+    <div class="inset" >
+			

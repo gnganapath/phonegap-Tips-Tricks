@@ -1,0 +1,129 @@
+3. Disable AJAX navigation for all links at once
+As awesome as AJAX navigation is, there are times where you’d just rather disable it. Use this bit of jQuery to tell the mobile library not to use AJAX navigation.
+Place it after the reference to the jQuery mobile library in the header of the page. In other words, the library must already be loaded before this code is referenced.
+<script>
+ $(document).ready(function() {
+  // disable ajax nav
+  $.mobile.ajaxLinksEnabled = false;
+ });
+</script>
+
+ 
+4. Stop some key items from being truncated
+One feature of the library (or flaw, depending on your needs) is that it intelligently truncates long items to fit into UI elements.
+I have found two situations where this can be annoying. First, in list items, where I prefer to see the full text. And secondly, in the footer text. It seems once you have more than just a few characters down there, it starts getting truncated with “…”. Use this simple CSS to override both of these defaults.
+For list items:
+body .ui-li .ui-li-desc {
+ white-space: normal;
+ }
+For footer content:
+body .ui-footer .ui-title {
+ white-space: normal;
+ }
+
+ 
+
+
+
+6. Target platforms with jQuery
+Much as we might want to execute certain CSS for certain devices, we might also want to run jQuery only on specific devices. Here is an adaptation of 
+some code from Snipplr
+ that allows me to easily segment portions of jQuery to run depending on the user’s device.
+ var deviceAgent = navigator.userAgent.toLowerCase();
+ var agentID = deviceAgent.match(/(iphone|ipod|ipad|android)/);
+ if(agentID.indexOf("iphone")>=0){
+  alert("iphone");
+ }
+ if(agentID.indexOf("ipod")>=0){
+  alert("ipod");
+ }
+ if(agentID.indexOf("ipad")>=0){
+  alert("ipad");
+ }
+ if(agentID.indexOf("android")>=0){
+  alert("android");
+ }
+----------------------------------------------------
+
+
+Option 1: Set the Initial-Scale
+The first approach is to modify the initial-scale of your web page until your content fills the entire viewport. You can do this with the following meta tag:
+1
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+----------------------------------------------------
+
+Option 2: Set a Minimum Height
+The second approach is to use a simple CSS attribute. You can apply a sufficiently large min-height value to either the body tag or any other block level element on your page to account for the empty white space. However, you have to be careful here for two reasons: the exact pixel value needed by the min-height attribute will vary depending on the initial-scale (i.e. zoom) of the page and the value will change if the user rotates from portrait to landscape mode or vice versa. The basic syntax for setting the min-height attribute on the body tag is shown below:
+1
+body { min-height: 900px; }
+Again: the actual pixel value used is dependent on the initial-scale/zoom of your site. You may have to go quite high or quite low.
+
+-----------------------------------------------------
+
+Option 3: Dynamically Set the Height with JavaScript
+The third approach is to dynamically check the document.height property against the window.outerHeight property and then dynamically increase the size of document.height when necessary.
+To following JavaScript code snippet is a non-framework solution to this problem:
+
+<script>
+   window.addEventListener("load", function(){
+       if(document.height <= window.outerHeight)
+       {
+           document.body.style.height = (window.outerHeight + 50) + 'px';
+           setTimeout( function(){ window.scrollTo(0, 1); }, 50 );
+       }
+       else
+       {
+           setTimeout( function(){ window.scrollTo(0, 1); }, 0 );
+       }
+   }
+   );
+ </script>
+On lines 5 above, I’ve added a seemingly arbitrary amount of padding (+50). This was necessary for the effect to work on both iOS and Android. I’ve also had to reposition the call to setTimeout as iOS wouldn’t produce the auto-scroll immediately after setting document.body.style.height. What I found to be especially odd was that not only did I need to reposition the setTimeout call, but for iOS I also had to add a seemingly arbitrary delay of +50 if I had just changed the document height. This was not the case initially (when using the load listener without setting a new value for the document height).
+
+----------------------------------------------------
+
+
+Internal/Anchor Links
+Variations on the above browser hack are already widely implemented on the web. However, there is at least one use-case where forcing the browser to scroll to 0,1 is exactly the wrong approach: visitors coming to your site via an anchor (a.k.a. internal) link. To accommodate this edge case you need to only call scrollTo(0, 1) if the hash tag isn’t present in the URL. To implement this approach all we must do is check for the presence of a value in window.location.hash and then wrap our load event listener within that conditional. Doing so leaves us with something like the following:
+if( !window.location.hash )
+{
+    window.addEventListener("load", function(){
+        if(document.height <= window.outerHeight + 10)
+        {
+            document.body.style.height = (window.outerHeight + 50) +'px';
+            setTimeout( function(){ window.scrollTo(0, 1); }, 50 );
+        }
+        else
+        {
+            setTimeout( function(){ window.scrollTo(0, 1); }, 0 );
+        }
+    }
+    );
+}
+
+----------------------------------------------
+
+Device Orientation Changes
+Another problem you may encounter deals with device orientation changes. On iOS, when a user rotates the phone from portrait mode to landscape mode, the scroll offset will not be changed automatically (Android doesn’t seem to suffer from this problem). This means that your user will be left somewhere further down the page than intended.
+The fix for this is to set an event listener on window.onorientationchange to be notified when the orientation changes, and then to execute the window.scrollTo(0, 1) call again after the change occurs.
+This seems like a good time to begin refactoring the code by splitting the code responsible for actually hiding the address bar into an independent function. After doing so, we’re left with the following:
+
+
+function hideAddressBar()
+{
+    if(!window.location.hash)
+    {
+        if(document.height <= window.outerHeight + 10)
+        {
+            document.body.style.height = (window.outerHeight + 50) +'px';
+            setTimeout( function(){ window.scrollTo(0, 1); }, 50 );
+        }
+        else
+        {
+            setTimeout( function(){ window.scrollTo(0, 1); }, 0 );
+        }
+    }
+}
+window.addEventListener("load", hideAddressBar );
+window.addEventListener("orientationchange", hideAddressBar );
+The above solution seems to work great for me on both Android and iOS, but there is one more issue that may or may not be relevant to your project: what if the user has scrolled significantly down the page prior to changing the device orientation? In that case, resetting the display to 0, 1 would cause the user to lose their place in the document. Accounting for this is highly implementation specific, but the gist is to simply set a y-axis threshold and then only reset the scroll offset to 0, 1 if the user hasn’t already scrolled beyond that threshold.

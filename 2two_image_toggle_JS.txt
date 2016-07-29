@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script language="javascript" type="text/javascript">
+	var imageNo = 2;
+	function swapImage() 
+	{
+		image = document.getElementById('back_btn_image');
+		if(imageNo ==1)
+		{
+		   image.src = "img/back.png"
+		   imageNo = 2;
+
+		   return(false);
+		}
+		else
+		{
+		   image.src = "img/back2.png"
+		   imageNo = 1;
+			
+			return(false);
+		}
+	}
+</script>
+</head>
+<body>
+	<h4><a ><img id="back_btn_image" name="back_btn_image" src="img/back.png" border="0" onclick="swapImage();"/></a></h4>
+		<!-- Your normal document content lives here -->
+</body>
+</html>
